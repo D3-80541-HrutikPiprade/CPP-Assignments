@@ -50,6 +50,15 @@ public :
         }
     }
 
+    ~Matrix()
+    {
+        if(matrix!=NULL)
+        {
+            for(int i=0;i<this->row;i++)
+                delete matrix[i];
+                delete [] matrix;
+        }
+    }
     friend void add(Matrix &a,Matrix &b,Matrix &r);
     friend void subtract(Matrix &a,Matrix &b,Matrix &r);
     friend void multiply(Matrix &a,Matrix &b,Matrix &r);
