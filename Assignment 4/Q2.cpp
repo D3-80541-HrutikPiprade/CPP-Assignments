@@ -180,7 +180,7 @@ public :
     {
         Employee::display();
         this->display_manager();
-        this->accept_salesman();
+        this->display_salesman();
     }
 
     void accept()
